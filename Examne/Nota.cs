@@ -19,7 +19,7 @@ namespace Examne
 
         public double CalcularNotaFinal(double Nota1, double Nota2, double Nota3)
         {
-            double resultado = (Nota1 + Nota2 + Nota3) / 3;
+            double resultado = (Nota1 + Nota2 + Nota3);
             return resultado;
         }
 
