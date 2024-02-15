@@ -1,6 +1,25 @@
 ﻿
 using Examne;
 
+Asignatura asignatura = new Asignatura();
+Console.WriteLine("Nombre del alumno: ");
+asignatura.Nombre = Console.ReadLine();
+Console.WriteLine("Nnumero de cuenta: ");
+asignatura.NumeroCuenta = Console.ReadLine();
+Console.WriteLine("Correo electronico: ");
+asignatura.Email = Console.ReadLine();
+
+Console.WriteLine(new string ('-', 40));
+
+Console.WriteLine("Nombre de la asignatura: ");
+asignatura.Nombre = Console.ReadLine();
+Console.WriteLine("Horario : ");
+asignatura.Horario = Console.ReadLine();
+Console.WriteLine("Nombre del docente: ");
+asignatura.Docente = Console.ReadLine();
+
+Console.WriteLine(new string('-', 40));
+
 try
 {
     Nota nota = new Nota();
@@ -32,9 +51,13 @@ try
             }
             else
             {
+                Console.WriteLine(new string('*',40));
                 double NotaFinal = nota.CalcularNotaFinal(nota.NotaParcial1, nota.NotaParcial2, nota.NotaParcial3);
-                Console.Write(NotaFinal);
+                asignatura.Imprimir();
+                Console.Write("Su nota: " + NotaFinal + " % ") ;
                 Console.Write(nota.MensajeNota(NotaFinal));
+                Console.WriteLine();
+                Console.WriteLine(new string('*', 40));
             }
         }
     }

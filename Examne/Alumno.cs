@@ -9,6 +9,6 @@ namespace Examne
         public string NumeroCuenta { get; set; }
         public string Email { get; set; }
 
-        public abstract void Imprimir();
+        public abstract void Imprimir(); 
     }
 }
